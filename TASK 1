@@ -1,0 +1,34 @@
+def main():
+    while True:
+        print("1 Add")
+        print("2 Sub")
+        print("3 Multiply")
+        print("4 Divide")
+        print("5 Exit")
+
+        option = int(input("Choose an operation: "))
+
+        if option == 5:
+            print ("exited")
+            break
+        
+
+        if option in [1, 2, 3, 4]:
+            num1 = float(input("Enter the 1st number: "))
+            num2 = float(input("Enter the 2nd number: "))
+
+            if option == 1:
+                result = num1 + num2
+            elif option == 2:
+                result = num1 - num2
+            elif option == 3:
+                result = num1 * num2
+            elif option == 4:
+                result = num1 / num2
+
+            print("The result of the operation is: {:.2f}".format(result))
+        else:
+            print("Enter a valid option")
+
+if __name__ == "__main__":
+    main()
